@@ -1,5 +1,9 @@
+<script>
+    import { zindex1,zindex2,display1,display2 } from '../../stores/stores.js';
+</script>
 
 <style>
+
     .iconList{
         position:relative;
         margin-top:0px;

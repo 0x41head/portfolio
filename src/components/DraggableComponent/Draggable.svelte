@@ -2,7 +2,6 @@
 	export let left = 500;
 	export let top = 500;
 	export let zindex =20 ;
-	export let display ='absolute' ;
 	let moving = false;
 	import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
@@ -67,8 +66,7 @@
 	on:click={toggle}
 	style="left: {left}px; 
 	top: {top}px ;
-	z-index:{zindex}; 
-	display:{display}" 
+	z-index:{zindex}; "
 	class="draggable">
 	<div class="topbar">
 		window

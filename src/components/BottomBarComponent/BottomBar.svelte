@@ -1,9 +1,19 @@
 <script>
     let visible = false;
     import { fly } from 'svelte/transition';
+    import { zindex1,zindex2,display1,display2 } from '../../stores/stores.js';
 
-    function clickboi() {
-    visible=!visible;
+    function clickboi1() {
+        zindex1.update((n)=>1000);
+		zindex2.update((n)=>0);
+        display1.update((n)=>true);
+        visible=!visible;
+  }
+  function clickbo2() {
+        zindex1.update((n)=>0);
+		zindex2.update((n)=>1000);
+        display2.update((n)=>true);
+        visible=!visible;
   }
   
 </script>
@@ -70,18 +80,18 @@
     out:fly={{ y: 200, duration: 500 }}
     class="applicationLauncher" 
 >
-<button class="applicationBtnClass" on:click={clickboi}>
+<button class="applicationBtnClass" on:click={clickboi1}>
     <img src='./icon.svg'/>
     about
 </button>
-<button class="applicationBtnClass" on:click={clickboi}>
+<button class="applicationBtnClass" on:click={clickbo2}>
     <img src='./icon.svg'/>
     about
 </button>
 </div>
 {/if}
 <div class="bottomBar">
-    <button on:click={clickboi} class="applicationLauncherBtnClass" >
+    <button on:click={()=>{visible=!visible}} class="applicationLauncherBtnClass" >
         <img src='./icon.svg' class="applicationLauncherImgClass">
     </button>
 </div>
