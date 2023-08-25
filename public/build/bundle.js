@@ -1386,59 +1386,77 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let div;
-    	let button;
+    	let button0;
     	let img0;
     	let img0_src_value;
     	let t0;
     	let t1;
     	let br;
     	let t2;
+    	let button1;
     	let img1;
     	let img1_src_value;
     	let t3;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			button = element("button");
+    			button0 = element("button");
     			img0 = element("img");
     			t0 = text("\n    about");
     			t1 = space();
     			br = element("br");
     			t2 = space();
+    			button1 = element("button");
     			img1 = element("img");
     			t3 = text("\n    about");
     			if (!src_url_equal(img0.src, img0_src_value = "./icon.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "class", "svelte-oi8ejr");
-    			add_location(img0, file$1, 30, 4, 581);
-    			attr_dev(button, "class", "btn svelte-oi8ejr");
-    			add_location(button, file$1, 29, 0, 556);
-    			add_location(br, file$1, 33, 0, 625);
+    			add_location(img0, file$1, 42, 4, 907);
+    			attr_dev(button0, "class", "btn svelte-oi8ejr");
+    			add_location(button0, file$1, 41, 0, 861);
+    			add_location(br, file$1, 45, 0, 951);
     			if (!src_url_equal(img1.src, img1_src_value = "./icon.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "svelte-oi8ejr");
-    			add_location(img1, file$1, 34, 4, 635);
+    			add_location(img1, file$1, 47, 4, 1002);
+    			attr_dev(button1, "class", "btn svelte-oi8ejr");
+    			add_location(button1, file$1, 46, 0, 957);
     			attr_dev(div, "class", "iconList svelte-oi8ejr");
-    			add_location(div, file$1, 28, 0, 533);
+    			add_location(div, file$1, 40, 0, 838);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, button);
-    			append_dev(button, img0);
-    			append_dev(button, t0);
+    			append_dev(div, button0);
+    			append_dev(button0, img0);
+    			append_dev(button0, t0);
     			append_dev(div, t1);
     			append_dev(div, br);
     			append_dev(div, t2);
-    			append_dev(div, img1);
-    			append_dev(div, t3);
+    			append_dev(div, button1);
+    			append_dev(button1, img1);
+    			append_dev(button1, t3);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(button0, "click", /*clickboi1*/ ctx[0], false, false, false, false),
+    					listen_dev(button1, "click", /*clickbo2*/ ctx[1], false, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -1456,14 +1474,37 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('IconList', slots, []);
+
+    	function clickboi1() {
+    		zindex1.update(n => 1000);
+    		zindex2.update(n => 0);
+    		display1.update(n => true);
+    		visible = !visible;
+    	}
+
+    	function clickbo2() {
+    		zindex1.update(n => 0);
+    		zindex2.update(n => 1000);
+    		display2.update(n => true);
+    		visible = !visible;
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<IconList> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ zindex1, zindex2, display1, display2 });
-    	return [];
+    	$$self.$capture_state = () => ({
+    		zindex1,
+    		zindex2,
+    		display1,
+    		display2,
+    		clickboi1,
+    		clickbo2
+    	});
+
+    	return [clickboi1, clickbo2];
     }
 
     class IconList extends SvelteComponentDev {
