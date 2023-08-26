@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+	background-color: #F1F0E8;
 	color: #333;
 	margin: 0;
 	padding: 8px;
@@ -46,18 +47,18 @@ input:disabled {
 
 button {
 	color: #333;
-	background-color: #f4f4f4;
+	background-color: #EEE0C9;
 	outline: none;
 }
 
 button:disabled {
-	color: #999;
+	color: #EEE0C9;
 }
 
 button:not(:disabled):active {
-	background-color: #ddd;
+	background-color: #EEE0C9;
 }
 
 button:focus {
-	border-color: #666;
+	border-color: #EEE0C9;
 }

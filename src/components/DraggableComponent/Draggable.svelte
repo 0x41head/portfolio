@@ -37,21 +37,21 @@
 	.draggable {
 		user-select: none;
 		cursor: move;
-		border: solid 1px gray;
-		background-color:orange;
+		border: solid 1px #102C57;
+		background-color:#EEE0C9;
 		position: absolute;
 	}
 	.topbar{
 		position:absolute;
 		margin-top:0px;
-		background-color:yellowgreen;
-        border-bottom: solid 1px black;
+		background-color:#ADC4CE;
+        border-bottom: solid 1px #102C57;
 		height:20px;
 		width:100%
 	}
 	.buttons{		
-		background-color:yellowgreen;
-        border: solid 1px black;
+		background-color:#ADC4CE;
+        border: solid 1px#102C57;
 		float: right;
 		font-size:10px;
         height:20px;

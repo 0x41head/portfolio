@@ -24,8 +24,10 @@
         bottom:0px;
         left:0px;
         width: 100%;
-        background-color: antiquewhite;
+        background-color: #96B6C5;
         z-index: 1000;
+        border-top:2px solid;
+        border-color: #102C57;
     }
     .applicationLauncher{
         position:absolute;
@@ -35,9 +37,10 @@
         left:0px;
         width: 30%;
         min-width:250px ;
-        background-color: lightseagreen;
+        background-color: #96B6C5;
         z-index: 1000;
-       
+        border:2px solid;
+        border-color: #102C57;
     }
     
     img{
@@ -53,6 +56,7 @@
     .applicationBtnClass {
         cursor: pointer;
         background-color: transparent;
+        border: none;
         border-color: transparent;
         display: flex;
         flex-direction: row;
@@ -65,11 +69,13 @@
         margin: 0%;
         height: 100%;
         background-color: transparent;
-        
+        bottom: none;
+        border-right:2px solid;
+        border-color: #102C57;
     }
 
     .applicationBtnClass:hover {
-        background-color: #3e8e41;
+        background-color: #EEE0C9;
     }
 
 

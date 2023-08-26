@@ -22,7 +22,7 @@
         width:200px;
         margin-left:0px;
         height: 100%;
-        background-color: aquamarine;
+        background-color: #F1F0E8;
     }
     img{
         width:50px;
