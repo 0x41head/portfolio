@@ -2,19 +2,20 @@
     import BottomBar from "./components/BottomBarComponent/BottomBar.svelte";
     import Draggable from "./components/DraggableComponent/Draggable.svelte";
     import IconList from "./components/IconListComponent/IconList.svelte";
-	import { zindex1,zindex2,display1,display2 } from './stores/stores.js';
+	import { zindex_about,zindex2,display_about,display2,source_about } from './stores/stores.js';
+	import SvelteMarkdown from 'svelte-markdown'
 
-	function onClick() {
-		zindex1.update((n)=>1000);
+	function onClick_about() {
+		zindex_about.update((n)=>1000);
 		zindex2.update((n)=>0);
 		console.log('here')
 	}
 	function onClick2() {
-		zindex1.update((n)=>0);
+		zindex_about.update((n)=>0);
 		zindex2.update((n)=>1000);
 	}
-	function onClose() {
-		display1.update((n)=>false);
+	function onClose_about() {
+		display_about.update((n)=>false);
 	}
 	function onClose2() {
 		display2.update((n)=>false);
@@ -24,12 +25,9 @@
 <BottomBar/>
 <IconList/>
 
-{#if $display1}
-<Draggable on:toggle={onClick} on:close={onClose}  zindex={$zindex1}>
-	<h1>
-		Drag Me
-	</h1>
-	gdsfd
+{#if $display_about}
+<Draggable on:toggle={onClick_about} on:close={onClose_about}  zindex={$zindex_about} nameOfWindow={"about"}>
+	<SvelteMarkdown  source={source_about} />
 </Draggable>
 {/if}
 

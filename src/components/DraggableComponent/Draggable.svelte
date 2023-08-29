@@ -1,7 +1,8 @@
 <script>
 	export let left = 500;
-	export let top = 500;
+	export let top = 20;
 	export let zindex =20 ;
+	export let nameOfWindow = "window" ;
 	let moving = false;
 	import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
@@ -69,7 +70,7 @@
 	z-index:{zindex}; "
 	class="draggable">
 	<div class="topbar">
-		window
+		{nameOfWindow}
 		<button 
             class="buttons"
             on:click={close}>

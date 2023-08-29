@@ -1,16 +1,16 @@
 <script>
     let visible = false;
     import { fly } from 'svelte/transition';
-    import { zindex1,zindex2,display1,display2 } from '../../stores/stores.js';
+    import { zindex_about,zindex2,display_about,display2 } from '../../stores/stores.js';
 
-    function clickboi1() {
-        zindex1.update((n)=>1000);
+    function click_application_launcher_about() {
+        zindex_about.update((n)=>1000);
 		zindex2.update((n)=>0);
-        display1.update((n)=>true);
+        display_about.update((n)=>true);
         visible=!visible;
   }
   function clickbo2() {
-        zindex1.update((n)=>0);
+        zindex_about.update((n)=>0);
 		zindex2.update((n)=>1000);
         display2.update((n)=>true);
         visible=!visible;
@@ -72,12 +72,18 @@
         bottom: none;
         border-right:2px solid;
         border-color: #102C57;
+        border-top:0px;
     }
 
     .applicationBtnClass:hover {
         background-color: #EEE0C9;
     }
-
+    .top-style-div{
+        background-color: #EEE0C9;
+        height: 25px;
+        border-bottom:2px solid;
+        border-color: #102C57;
+    }
 
 </style>
 {#if visible}
@@ -86,13 +92,14 @@
     out:fly={{ y: 200, duration: 500 }}
     class="applicationLauncher" 
 >
-<button class="applicationBtnClass" on:click={clickboi1}>
+<div class="top-style-div" ></div>
+<button class="applicationBtnClass" on:click={click_application_launcher_about}>
     <img src='./icon.svg'/>
     about
 </button>
 <button class="applicationBtnClass" on:click={clickbo2}>
     <img src='./icon.svg'/>
-    about
+    window
 </button>
 </div>
 {/if}

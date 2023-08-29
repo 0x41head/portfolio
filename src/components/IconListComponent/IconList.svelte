@@ -1,16 +1,14 @@
 <script>
-    import { zindex1,zindex2,display1,display2 } from '../../stores/stores.js';
-    function clickboi1() {
-        zindex1.update((n)=>1000);
+    import { zindex_about,zindex2,display_about,display2 } from '../../stores/stores.js';
+    function click_about_logo() {
+        zindex_about.update((n)=>1000);
 		zindex2.update((n)=>0);
-        display1.update((n)=>true);
-        visible=!visible;
+        display_about.update((n)=>true);
   }
   function clickbo2() {
-        zindex1.update((n)=>0);
+        zindex_about.update((n)=>0);
 		zindex2.update((n)=>1000);
         display2.update((n)=>true);
-        visible=!visible;
   }
 </script>
 
@@ -39,14 +37,14 @@
 </style>
 
 <div class="iconList">
-<button class="btn" on:click={clickboi1}>
+<button class="btn" on:click={click_about_logo}>
     <img src='./icon.svg'/>
     about
 </button>
 <br/>
 <button class="btn" on:click={clickbo2}>
     <img src='./icon.svg'/>
-    about
+    windw
 </button>
 </div>
 
