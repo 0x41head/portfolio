@@ -20,7 +20,7 @@
 <style>
     .bottomBar{
         position:absolute;
-        height:50px;
+        height:40px;
         bottom:0px;
         left:0px;
         width: 100%;
@@ -32,12 +32,12 @@
     .applicationLauncher{
         position:absolute;
         height:50%;
-        min-height:450px;
+        min-height:400px;
         bottom:0px;
         left:0px;
         width: 30%;
         min-width:250px ;
-        background-color: #96B6C5;
+        background-color: #EEE0C9;
         z-index: 1000;
         border:2px solid;
         border-color: #102C57;
@@ -76,10 +76,10 @@
     }
 
     .applicationBtnClass:hover {
-        background-color: #EEE0C9;
+        background-color: #96B6C5;
     }
     .top-style-div{
-        background-color: #EEE0C9;
+        background-color: #96B6C5;
         height: 25px;
         border-bottom:2px solid;
         border-color: #102C57;
@@ -94,12 +94,12 @@
 >
 <div class="top-style-div" ></div>
 <button class="applicationBtnClass" on:click={click_application_launcher_about}>
-    <img src='./icon.svg'/>
+    <img src='./about.svg'/>
     about
 </button>
 <button class="applicationBtnClass" on:click={clickbo2}>
-    <img src='./icon.svg'/>
-    window
+    <img src='./project.svg'/>
+    projects
 </button>
 </div>
 {/if}

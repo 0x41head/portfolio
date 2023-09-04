@@ -1040,6 +1040,7 @@ var app = (function () {
     }
 
     const zindex_about = writable(0);
+    const left_about = writable(200);
     const zindex2 = writable(0);
     const display_about = writable(true);
     const display2 = writable(true);
@@ -1104,20 +1105,20 @@ var app = (function () {
     			t2 = space();
     			button1 = element("button");
     			img1 = element("img");
-    			t3 = text("\n    window");
-    			attr_dev(div0, "class", "top-style-div svelte-pzdbcu");
+    			t3 = text("\n    projects");
+    			attr_dev(div0, "class", "top-style-div svelte-1l3kjd4");
     			add_location(div0, file$m, 94, 0, 2115);
-    			if (!src_url_equal(img0.src, img0_src_value = "./icon.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-pzdbcu");
+    			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "class", "svelte-1l3kjd4");
     			add_location(img0, file$m, 96, 4, 2235);
-    			attr_dev(button0, "class", "applicationBtnClass svelte-pzdbcu");
+    			attr_dev(button0, "class", "applicationBtnClass svelte-1l3kjd4");
     			add_location(button0, file$m, 95, 0, 2150);
-    			if (!src_url_equal(img1.src, img1_src_value = "./icon.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-pzdbcu");
-    			add_location(img1, file$m, 100, 4, 2340);
-    			attr_dev(button1, "class", "applicationBtnClass svelte-pzdbcu");
-    			add_location(button1, file$m, 99, 0, 2279);
-    			attr_dev(div1, "class", "applicationLauncher svelte-pzdbcu");
+    			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "class", "svelte-1l3kjd4");
+    			add_location(img1, file$m, 100, 4, 2341);
+    			attr_dev(button1, "class", "applicationBtnClass svelte-1l3kjd4");
+    			add_location(button1, file$m, 99, 0, 2280);
+    			attr_dev(div1, "class", "applicationLauncher svelte-1l3kjd4");
     			add_location(div1, file$m, 89, 0, 1995);
     		},
     		m: function mount(target, anchor) {
@@ -1198,12 +1199,12 @@ var app = (function () {
     			button = element("button");
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./icon.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "applicationLauncherImgClass svelte-pzdbcu");
-    			add_location(img, file$m, 107, 8, 2514);
-    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-pzdbcu");
-    			add_location(button, file$m, 106, 4, 2426);
-    			attr_dev(div, "class", "bottomBar svelte-pzdbcu");
-    			add_location(div, file$m, 105, 0, 2398);
+    			attr_dev(img, "class", "applicationLauncherImgClass svelte-1l3kjd4");
+    			add_location(img, file$m, 107, 8, 2520);
+    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-1l3kjd4");
+    			add_location(button, file$m, 106, 4, 2432);
+    			attr_dev(div, "class", "bottomBar svelte-1l3kjd4");
+    			add_location(div, file$m, 105, 0, 2404);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1639,20 +1640,20 @@ var app = (function () {
     			t2 = space();
     			button1 = element("button");
     			img1 = element("img");
-    			t3 = text("\n    windw");
-    			if (!src_url_equal(img0.src, img0_src_value = "./icon.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-lbqljc");
-    			add_location(img0, file$k, 40, 4, 891);
-    			attr_dev(button0, "class", "btn svelte-lbqljc");
-    			add_location(button0, file$k, 39, 0, 838);
-    			add_location(br, file$k, 43, 0, 935);
-    			if (!src_url_equal(img1.src, img1_src_value = "./icon.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-lbqljc");
-    			add_location(img1, file$k, 45, 4, 986);
-    			attr_dev(button1, "class", "btn svelte-lbqljc");
-    			add_location(button1, file$k, 44, 0, 941);
-    			attr_dev(div, "class", "iconList svelte-lbqljc");
-    			add_location(div, file$k, 38, 0, 815);
+    			t3 = text("\n    projects");
+    			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "class", "svelte-hssvot");
+    			add_location(img0, file$k, 41, 4, 912);
+    			attr_dev(button0, "class", "btn svelte-hssvot");
+    			add_location(button0, file$k, 40, 0, 859);
+    			add_location(br, file$k, 44, 0, 957);
+    			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "class", "svelte-hssvot");
+    			add_location(img1, file$k, 46, 4, 1008);
+    			attr_dev(button1, "class", "btn svelte-hssvot");
+    			add_location(button1, file$k, 45, 0, 963);
+    			attr_dev(div, "class", "iconList svelte-hssvot");
+    			add_location(div, file$k, 39, 0, 836);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10602,6 +10603,7 @@ var app = (function () {
     	draggable = new Draggable({
     			props: {
     				zindex: /*$zindex_about*/ ctx[1],
+    				left: /*$left_about*/ ctx[2],
     				nameOfWindow: "about",
     				$$slots: { default: [create_default_slot_1] },
     				$$scope: { ctx }
@@ -10609,8 +10611,8 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	draggable.$on("toggle", /*onClick_about*/ ctx[4]);
-    	draggable.$on("close", /*onClose_about*/ ctx[6]);
+    	draggable.$on("toggle", /*onClick_about*/ ctx[5]);
+    	draggable.$on("close", /*onClose_about*/ ctx[7]);
 
     	const block = {
     		c: function create() {
@@ -10623,8 +10625,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const draggable_changes = {};
     			if (dirty & /*$zindex_about*/ 2) draggable_changes.zindex = /*$zindex_about*/ ctx[1];
+    			if (dirty & /*$left_about*/ 4) draggable_changes.left = /*$left_about*/ ctx[2];
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				draggable_changes.$$scope = { dirty, ctx };
     			}
 
@@ -10655,7 +10658,7 @@ var app = (function () {
     	return block;
     }
 
-    // (29:0) <Draggable on:toggle={onClick_about} on:close={onClose_about}  zindex={$zindex_about} nameOfWindow={"about"}>
+    // (29:0) <Draggable on:toggle={onClick_about}  on:close={onClose_about}   zindex={$zindex_about}  left={$left_about} nameOfWindow={"about"}>
     function create_default_slot_1(ctx) {
     	let sveltemarkdown;
     	let current;
@@ -10692,29 +10695,29 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(29:0) <Draggable on:toggle={onClick_about} on:close={onClose_about}  zindex={$zindex_about} nameOfWindow={\\\"about\\\"}>",
+    		source: "(29:0) <Draggable on:toggle={onClick_about}  on:close={onClose_about}   zindex={$zindex_about}  left={$left_about} nameOfWindow={\\\"about\\\"}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (34:0) {#if $display2}
+    // (38:0) {#if $display2}
     function create_if_block(ctx) {
     	let draggable;
     	let current;
 
     	draggable = new Draggable({
     			props: {
-    				zindex: /*$zindex2*/ ctx[3],
+    				zindex: /*$zindex2*/ ctx[4],
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	draggable.$on("toggle", /*onClick2*/ ctx[5]);
-    	draggable.$on("close", /*onClose2*/ ctx[7]);
+    	draggable.$on("toggle", /*onClick2*/ ctx[6]);
+    	draggable.$on("close", /*onClose2*/ ctx[8]);
 
     	const block = {
     		c: function create() {
@@ -10726,9 +10729,9 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const draggable_changes = {};
-    			if (dirty & /*$zindex2*/ 8) draggable_changes.zindex = /*$zindex2*/ ctx[3];
+    			if (dirty & /*$zindex2*/ 16) draggable_changes.zindex = /*$zindex2*/ ctx[4];
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				draggable_changes.$$scope = { dirty, ctx };
     			}
 
@@ -10752,14 +10755,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(34:0) {#if $display2}",
+    		source: "(38:0) {#if $display2}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} >
+    // (39:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} >
     function create_default_slot(ctx) {
     	let h3;
 
@@ -10767,7 +10770,7 @@ var app = (function () {
     		c: function create() {
     			h3 = element("h3");
     			h3.textContent = "Anothher draggable";
-    			add_location(h3, file, 35, 1, 1026);
+    			add_location(h3, file, 39, 1, 1059);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -10782,7 +10785,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(35:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} >",
+    		source: "(39:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} >",
     		ctx
     	});
 
@@ -10800,7 +10803,7 @@ var app = (function () {
     	bottombar = new BottomBar({ $$inline: true });
     	iconlist = new IconList({ $$inline: true });
     	let if_block0 = /*$display_about*/ ctx[0] && create_if_block_1(ctx);
-    	let if_block1 = /*$display2*/ ctx[2] && create_if_block(ctx);
+    	let if_block1 = /*$display2*/ ctx[3] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -10851,11 +10854,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*$display2*/ ctx[2]) {
+    			if (/*$display2*/ ctx[3]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*$display2*/ 4) {
+    					if (dirty & /*$display2*/ 8) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -10915,16 +10918,19 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let $display_about;
     	let $zindex_about;
+    	let $left_about;
     	let $display2;
     	let $zindex2;
     	validate_store(display_about, 'display_about');
     	component_subscribe($$self, display_about, $$value => $$invalidate(0, $display_about = $$value));
     	validate_store(zindex_about, 'zindex_about');
     	component_subscribe($$self, zindex_about, $$value => $$invalidate(1, $zindex_about = $$value));
+    	validate_store(left_about, 'left_about');
+    	component_subscribe($$self, left_about, $$value => $$invalidate(2, $left_about = $$value));
     	validate_store(display2, 'display2');
-    	component_subscribe($$self, display2, $$value => $$invalidate(2, $display2 = $$value));
+    	component_subscribe($$self, display2, $$value => $$invalidate(3, $display2 = $$value));
     	validate_store(zindex2, 'zindex2');
-    	component_subscribe($$self, zindex2, $$value => $$invalidate(3, $zindex2 = $$value));
+    	component_subscribe($$self, zindex2, $$value => $$invalidate(4, $zindex2 = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
 
@@ -10962,6 +10968,7 @@ var app = (function () {
     		display_about,
     		display2,
     		source_about,
+    		left_about,
     		SvelteMarkdown,
     		onClick_about,
     		onClick2,
@@ -10969,6 +10976,7 @@ var app = (function () {
     		onClose2,
     		$display_about,
     		$zindex_about,
+    		$left_about,
     		$display2,
     		$zindex2
     	});
@@ -10976,6 +10984,7 @@ var app = (function () {
     	return [
     		$display_about,
     		$zindex_about,
+    		$left_about,
     		$display2,
     		$zindex2,
     		onClick_about,

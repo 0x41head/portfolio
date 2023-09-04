@@ -32,19 +32,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 75px;
     }
 
 </style>
 
 <div class="iconList">
 <button class="btn" on:click={click_about_logo}>
-    <img src='./icon.svg'/>
+    <img src='./about.svg'/>
     about
 </button>
 <br/>
 <button class="btn" on:click={clickbo2}>
-    <img src='./icon.svg'/>
-    windw
+    <img src='./project.svg'/>
+    projects
 </button>
 </div>
 

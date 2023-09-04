@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
 
 export const zindex_about = writable(0);
+export const left_about = writable(200);
 export const zindex2 = writable(0);
 export const display_about = writable(true);
 export const display2 = writable(true);
