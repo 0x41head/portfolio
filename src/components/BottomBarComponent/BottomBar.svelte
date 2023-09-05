@@ -101,6 +101,12 @@
     <img src='./project.svg'/>
     projects
 </button>
+<button class="applicationBtnClass" on:click={()=>{ 
+    window.open("https://github.com/0x41head/", "_blank");
+    visible=!visible}}>
+    <img src='./github.svg'/>
+    github
+</button>
 </div>
 {/if}
 <div class="bottomBar">

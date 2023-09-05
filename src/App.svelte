@@ -27,10 +27,10 @@
 
 {#if $display_about}
 <Draggable on:toggle={onClick_about} 
-on:close={onClose_about}  
-zindex={$zindex_about} 
-left={$left_about}
-nameOfWindow={"about"}>
+	on:close={onClose_about}  
+	zindex={$zindex_about} 
+	left={$left_about}
+	nameOfWindow={"about"}>
 	<SvelteMarkdown  source={source_about} />
 </Draggable>
 {/if}

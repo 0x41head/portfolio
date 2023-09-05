@@ -1042,8 +1042,8 @@ var app = (function () {
     const zindex_about = writable(0);
     const left_about = writable(200);
     const zindex2 = writable(0);
-    const display_about = writable(true);
-    const display2 = writable(true);
+    const display_about = writable(false);
+    const display2 = writable(false);
     const source_about = `
 # Aryan Prasad
 
@@ -1088,6 +1088,11 @@ var app = (function () {
     	let img1;
     	let img1_src_value;
     	let t3;
+    	let t4;
+    	let button2;
+    	let img2;
+    	let img2_src_value;
+    	let t5;
     	let div1_intro;
     	let div1_outro;
     	let current;
@@ -1106,6 +1111,10 @@ var app = (function () {
     			button1 = element("button");
     			img1 = element("img");
     			t3 = text("\n    projects");
+    			t4 = space();
+    			button2 = element("button");
+    			img2 = element("img");
+    			t5 = text("\n    github");
     			attr_dev(div0, "class", "top-style-div svelte-1l3kjd4");
     			add_location(div0, file$m, 94, 0, 2115);
     			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
@@ -1118,6 +1127,11 @@ var app = (function () {
     			add_location(img1, file$m, 100, 4, 2341);
     			attr_dev(button1, "class", "applicationBtnClass svelte-1l3kjd4");
     			add_location(button1, file$m, 99, 0, 2280);
+    			if (!src_url_equal(img2.src, img2_src_value = "./github.svg")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "class", "svelte-1l3kjd4");
+    			add_location(img2, file$m, 106, 4, 2531);
+    			attr_dev(button2, "class", "applicationBtnClass svelte-1l3kjd4");
+    			add_location(button2, file$m, 103, 0, 2391);
     			attr_dev(div1, "class", "applicationLauncher svelte-1l3kjd4");
     			add_location(div1, file$m, 89, 0, 1995);
     		},
@@ -1132,12 +1146,17 @@ var app = (function () {
     			append_dev(div1, button1);
     			append_dev(button1, img1);
     			append_dev(button1, t3);
+    			append_dev(div1, t4);
+    			append_dev(div1, button2);
+    			append_dev(button2, img2);
+    			append_dev(button2, t5);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", /*click_application_launcher_about*/ ctx[1], false, false, false, false),
-    					listen_dev(button1, "click", /*clickbo2*/ ctx[2], false, false, false, false)
+    					listen_dev(button1, "click", /*clickbo2*/ ctx[2], false, false, false, false),
+    					listen_dev(button2, "click", /*click_handler*/ ctx[3], false, false, false, false)
     				];
 
     				mounted = true;
@@ -1200,11 +1219,11 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./icon.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "class", "applicationLauncherImgClass svelte-1l3kjd4");
-    			add_location(img, file$m, 107, 8, 2520);
+    			add_location(img, file$m, 113, 8, 2707);
     			attr_dev(button, "class", "applicationLauncherBtnClass svelte-1l3kjd4");
-    			add_location(button, file$m, 106, 4, 2432);
+    			add_location(button, file$m, 112, 4, 2619);
     			attr_dev(div, "class", "bottomBar svelte-1l3kjd4");
-    			add_location(div, file$m, 105, 0, 2404);
+    			add_location(div, file$m, 111, 0, 2591);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1218,7 +1237,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler*/ ctx[3], false, false, false, false);
+    				dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[4], false, false, false, false);
     				mounted = true;
     			}
     		},
@@ -1301,6 +1320,11 @@ var app = (function () {
     	});
 
     	const click_handler = () => {
+    		window.open("https://github.com/0x41head/", "_blank");
+    		$$invalidate(0, visible = !visible);
+    	};
+
+    	const click_handler_1 = () => {
     		$$invalidate(0, visible = !visible);
     	};
 
@@ -1323,7 +1347,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [visible, click_application_launcher_about, clickbo2, click_handler];
+    	return [
+    		visible,
+    		click_application_launcher_about,
+    		clickbo2,
+    		click_handler,
+    		click_handler_1
+    	];
     }
 
     class BottomBar extends SvelteComponentDev {
@@ -1620,12 +1650,19 @@ var app = (function () {
     	let img0_src_value;
     	let t0;
     	let t1;
-    	let br;
+    	let br0;
     	let t2;
     	let button1;
     	let img1;
     	let img1_src_value;
     	let t3;
+    	let t4;
+    	let br1;
+    	let t5;
+    	let button2;
+    	let img2;
+    	let img2_src_value;
+    	let t6;
     	let mounted;
     	let dispose;
 
@@ -1636,22 +1673,34 @@ var app = (function () {
     			img0 = element("img");
     			t0 = text("\n    about");
     			t1 = space();
-    			br = element("br");
+    			br0 = element("br");
     			t2 = space();
     			button1 = element("button");
     			img1 = element("img");
     			t3 = text("\n    projects");
+    			t4 = space();
+    			br1 = element("br");
+    			t5 = space();
+    			button2 = element("button");
+    			img2 = element("img");
+    			t6 = text("\n    github");
     			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "class", "svelte-hssvot");
     			add_location(img0, file$k, 41, 4, 912);
     			attr_dev(button0, "class", "btn svelte-hssvot");
     			add_location(button0, file$k, 40, 0, 859);
-    			add_location(br, file$k, 44, 0, 957);
+    			add_location(br0, file$k, 44, 0, 957);
     			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "svelte-hssvot");
     			add_location(img1, file$k, 46, 4, 1008);
     			attr_dev(button1, "class", "btn svelte-hssvot");
     			add_location(button1, file$k, 45, 0, 963);
+    			add_location(br1, file$k, 49, 0, 1058);
+    			if (!src_url_equal(img2.src, img2_src_value = "./github.svg")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "class", "svelte-hssvot");
+    			add_location(img2, file$k, 51, 4, 1162);
+    			attr_dev(button2, "class", "btn svelte-hssvot");
+    			add_location(button2, file$k, 50, 0, 1064);
     			attr_dev(div, "class", "iconList svelte-hssvot");
     			add_location(div, file$k, 39, 0, 836);
     		},
@@ -1664,16 +1713,23 @@ var app = (function () {
     			append_dev(button0, img0);
     			append_dev(button0, t0);
     			append_dev(div, t1);
-    			append_dev(div, br);
+    			append_dev(div, br0);
     			append_dev(div, t2);
     			append_dev(div, button1);
     			append_dev(button1, img1);
     			append_dev(button1, t3);
+    			append_dev(div, t4);
+    			append_dev(div, br1);
+    			append_dev(div, t5);
+    			append_dev(div, button2);
+    			append_dev(button2, img2);
+    			append_dev(button2, t6);
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(button0, "click", /*click_about_logo*/ ctx[0], false, false, false, false),
-    					listen_dev(button1, "click", /*clickbo2*/ ctx[1], false, false, false, false)
+    					listen_dev(button1, "click", /*clickbo2*/ ctx[1], false, false, false, false),
+    					listen_dev(button2, "click", /*click_handler*/ ctx[2], false, false, false, false)
     				];
 
     				mounted = true;
@@ -1722,6 +1778,10 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<IconList> was created with unknown prop '${key}'`);
     	});
 
+    	const click_handler = () => {
+    		window.open("https://github.com/0x41head/", "_blank");
+    	};
+
     	$$self.$capture_state = () => ({
     		zindex_about,
     		zindex2,
@@ -1731,7 +1791,7 @@ var app = (function () {
     		clickbo2
     	});
 
-    	return [click_about_logo, clickbo2];
+    	return [click_about_logo, clickbo2, click_handler];
     }
 
     class IconList extends SvelteComponentDev {
@@ -10658,7 +10718,7 @@ var app = (function () {
     	return block;
     }
 
-    // (29:0) <Draggable on:toggle={onClick_about}  on:close={onClose_about}   zindex={$zindex_about}  left={$left_about} nameOfWindow={"about"}>
+    // (29:0) <Draggable on:toggle={onClick_about}   on:close={onClose_about}    zindex={$zindex_about}   left={$left_about}  nameOfWindow={"about"}>
     function create_default_slot_1(ctx) {
     	let sveltemarkdown;
     	let current;
@@ -10695,7 +10755,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(29:0) <Draggable on:toggle={onClick_about}  on:close={onClose_about}   zindex={$zindex_about}  left={$left_about} nameOfWindow={\\\"about\\\"}>",
+    		source: "(29:0) <Draggable on:toggle={onClick_about}   on:close={onClose_about}    zindex={$zindex_about}   left={$left_about}  nameOfWindow={\\\"about\\\"}>",
     		ctx
     	});
 
@@ -10770,7 +10830,7 @@ var app = (function () {
     		c: function create() {
     			h3 = element("h3");
     			h3.textContent = "Anothher draggable";
-    			add_location(h3, file, 39, 1, 1059);
+    			add_location(h3, file, 39, 1, 1063);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);

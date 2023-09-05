@@ -47,6 +47,11 @@
     <img src='./project.svg'/>
     projects
 </button>
+<br/>
+<button class="btn" on:click={()=>{ window.open("https://github.com/0x41head/", "_blank");}}>
+    <img src='./github.svg'/>
+    github
+</button>
 </div>
 
 
