@@ -2,7 +2,7 @@
     import BottomBar from "./components/BottomBarComponent/BottomBar.svelte";
     import Draggable from "./components/DraggableComponent/Draggable.svelte";
     import IconList from "./components/IconListComponent/IconList.svelte";
-	import { zindex_about,zindex2,display_about,display2,source_about,left_about } from './stores/stores.js';
+	import { zindex_about,zindex2,display_about,display2,source_about,left_about,source_projects } from './stores/stores.js';
 	import SvelteMarkdown from 'svelte-markdown'
 
 	function onClick_about() {
@@ -36,9 +36,7 @@
 {/if}
 
 {#if $display2}
-<Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} >
-	<h3>
-		Anothher draggable
-	</h3>
+<Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} nameOfWindow={"projects"} >
+	<SvelteMarkdown  source={source_projects} />
 </Draggable>
 {/if}
