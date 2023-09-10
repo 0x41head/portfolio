@@ -17,6 +17,12 @@ My newer projects are usually on my blog:
     Hosted on mdbook.
 
     ---
+- ### tAIko  
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/tAIko)  
+    A bot I made for the now defunct game taiko.bui.pm (An online port for Taiko no Tatsujin)
+
+    ---
+
 
 - ### Excel AI  
     [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/Excel-AI)  

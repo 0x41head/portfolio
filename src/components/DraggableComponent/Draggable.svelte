@@ -59,6 +59,9 @@
 	}
 	.text{
 		padding:5px;
+		height:70vh;
+		overflow-y: scroll;
+
 	}
 </style>
 

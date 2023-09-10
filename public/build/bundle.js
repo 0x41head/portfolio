@@ -1056,6 +1056,12 @@ My newer projects are usually on my blog:
     Hosted on mdbook.
 
     ---
+- ### tAIko  
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/tAIko)  
+    A bot I made for the now defunct game taiko.bui.pm (An online port for Taiko no Tatsujin)
+
+    ---
+
 
 - ### Excel AI  
     [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/Excel-AI)  
@@ -1429,17 +1435,17 @@ My newer projects are usually on my blog:
     			t3 = space();
     			div1 = element("div");
     			if (default_slot) default_slot.c();
-    			attr_dev(button, "class", "buttons svelte-1cujahq");
-    			add_location(button, file$k, 73, 2, 1209);
-    			attr_dev(div0, "class", "topbar svelte-1cujahq");
-    			add_location(div0, file$k, 71, 1, 1169);
-    			attr_dev(div1, "class", "text svelte-1cujahq");
-    			add_location(div1, file$k, 79, 1, 1317);
+    			attr_dev(button, "class", "buttons svelte-1399izr");
+    			add_location(button, file$k, 76, 2, 1247);
+    			attr_dev(div0, "class", "topbar svelte-1399izr");
+    			add_location(div0, file$k, 74, 1, 1207);
+    			attr_dev(div1, "class", "text svelte-1399izr");
+    			add_location(div1, file$k, 82, 1, 1355);
     			set_style(section, "left", /*left*/ ctx[0] + "px");
     			set_style(section, "top", /*top*/ ctx[1] + "px ");
     			set_style(section, "z-index", /*zindex*/ ctx[2]);
-    			attr_dev(section, "class", "draggable svelte-1cujahq");
-    			add_location(section, file$k, 64, 0, 1027);
+    			attr_dev(section, "class", "draggable svelte-1399izr");
+    			add_location(section, file$k, 67, 0, 1065);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
