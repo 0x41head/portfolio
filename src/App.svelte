@@ -36,7 +36,10 @@
 {/if}
 
 {#if $display2}
-<Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} nameOfWindow={"projects"} >
+<Draggable on:toggle={onClick2} 
+	on:close={onClose2} 
+	zindex={$zindex2} 
+	nameOfWindow={"projects"} >
 	<SvelteMarkdown  source={source_projects} />
 </Draggable>
 {/if}

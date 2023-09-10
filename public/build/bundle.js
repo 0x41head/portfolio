@@ -1049,8 +1049,32 @@ var app = (function () {
 My newer projects are usually on my blog:
 
 ---
+- ### CTF Writeups
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/CTF-Writeups)
+    [![Website](https://img.shields.io/badge/website-blue)](https://0x41head.github.io/CTF-Writeups/book/index.html)  
+    A website that contains all of my CTF writeups from college :)  
+    Hosted on mdbook.
+
+    ---
+
+- ### Excel AI  
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/Excel-AI)  
+    A path finding AI made solely in MS Excel.
+
+    ---
+
+- ### Music using MS Paint  
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/Music-Using-MSPaint)  
+    A digital audio workstation (DAW) that utilizes MS paint as the GUI.
+
+    ---
+
 - ### Sonic AI
-    project text goes here`;
+    [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0x41head/Sonic-AI)  
+    An RL Project utilizes the NeuroEvolution of Augmenting Topologies (NEAT) algorithm to teach Sonic to navigate complex levels autonomously.  
+
+---
+       `;
     const source_about = `
 # Aryan Prasad
 
@@ -10829,7 +10853,7 @@ My newer projects are usually on my blog:
     	return block;
     }
 
-    // (39:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} nameOfWindow={"projects"} >
+    // (39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex2}   nameOfWindow={"projects"} >
     function create_default_slot(ctx) {
     	let sveltemarkdown;
     	let current;
@@ -10866,7 +10890,7 @@ My newer projects are usually on my blog:
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(39:0) <Draggable on:toggle={onClick2} on:close={onClose2} zindex={$zindex2} nameOfWindow={\\\"projects\\\"} >",
+    		source: "(39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex2}   nameOfWindow={\\\"projects\\\"} >",
     		ctx
     	});
 
