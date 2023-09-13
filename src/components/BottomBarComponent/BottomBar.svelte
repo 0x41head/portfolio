@@ -2,6 +2,7 @@
     let visible = false;
     import { fly } from 'svelte/transition';
     import { zindex_about,zindex2,display_about,display2 } from '../../stores/stores.js';
+    let hostname = location.hostname; 
 
     function click_application_launcher_about() {
         zindex_about.update((n)=>1000);
@@ -29,6 +30,7 @@
         border-top:2px solid;
         border-color: #102C57;
     }
+    
     .applicationLauncher{
         position:absolute;
         height:50%;
@@ -42,7 +44,21 @@
         border:2px solid;
         border-color: #102C57;
     }
-    
+    .sideBarButtonHalf{
+        height:100%;
+        width: 50%;
+        position:absolute;
+    }
+    .sideBarNonButtonHalf{
+        height:100%;
+        width: 50%;
+        background-color: #96B6C5;
+        border-left:2px solid;
+        border-color: #102C57;
+        
+        position:absolute;
+        right: 0;
+    }
     img{
         height:20px;
         margin-right: 10px;
@@ -93,6 +109,7 @@
     class="applicationLauncher" 
 >
 <div class="top-style-div" ></div>
+<div class="sideBarButtonHalf">
 <button class="applicationBtnClass" on:click={click_application_launcher_about}>
     <img src='./about.svg'/>
     about
@@ -103,10 +120,15 @@
 </button>
 <button class="applicationBtnClass" on:click={()=>{ 
     window.open("https://github.com/0x41head/", "_blank");
-    visible=!visible}}>
+    visible=!visible}
+}>
     <img src='./github.svg'/>
     github
 </button>
+</div>
+<div class="sideBarNonButtonHalf">
+    {hostname}
+</div>
 </div>
 {/if}
 <div class="bottomBar">

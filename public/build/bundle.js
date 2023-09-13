@@ -1111,11 +1111,12 @@ My newer projects are usually on my blog:
 
     const file$l = "src/components/BottomBarComponent/BottomBar.svelte";
 
-    // (89:0) {#if visible}
+    // (105:0) {#if visible}
     function create_if_block$5(ctx) {
-    	let div1;
+    	let div3;
     	let div0;
     	let t0;
+    	let div1;
     	let button0;
     	let img0;
     	let img0_src_value;
@@ -1130,17 +1131,20 @@ My newer projects are usually on my blog:
     	let img2;
     	let img2_src_value;
     	let t5;
-    	let div1_intro;
-    	let div1_outro;
+    	let t6;
+    	let div2;
+    	let div3_intro;
+    	let div3_outro;
     	let current;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			t0 = space();
+    			div1 = element("div");
     			button0 = element("button");
     			img0 = element("img");
     			t1 = text("\n    about");
@@ -1152,30 +1156,38 @@ My newer projects are usually on my blog:
     			button2 = element("button");
     			img2 = element("img");
     			t5 = text("\n    github");
-    			attr_dev(div0, "class", "top-style-div svelte-1l3kjd4");
-    			add_location(div0, file$l, 94, 0, 2115);
+    			t6 = space();
+    			div2 = element("div");
+    			div2.textContent = `${/*hostname*/ ctx[1]}`;
+    			attr_dev(div0, "class", "top-style-div svelte-11tlc09");
+    			add_location(div0, file$l, 110, 0, 2477);
     			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-1l3kjd4");
-    			add_location(img0, file$l, 96, 4, 2235);
-    			attr_dev(button0, "class", "applicationBtnClass svelte-1l3kjd4");
-    			add_location(button0, file$l, 95, 0, 2150);
+    			attr_dev(img0, "class", "svelte-11tlc09");
+    			add_location(img0, file$l, 113, 4, 2629);
+    			attr_dev(button0, "class", "applicationBtnClass svelte-11tlc09");
+    			add_location(button0, file$l, 112, 0, 2544);
     			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-1l3kjd4");
-    			add_location(img1, file$l, 100, 4, 2341);
-    			attr_dev(button1, "class", "applicationBtnClass svelte-1l3kjd4");
-    			add_location(button1, file$l, 99, 0, 2280);
+    			attr_dev(img1, "class", "svelte-11tlc09");
+    			add_location(img1, file$l, 117, 4, 2735);
+    			attr_dev(button1, "class", "applicationBtnClass svelte-11tlc09");
+    			add_location(button1, file$l, 116, 0, 2674);
     			if (!src_url_equal(img2.src, img2_src_value = "./github.svg")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-1l3kjd4");
-    			add_location(img2, file$l, 106, 4, 2531);
-    			attr_dev(button2, "class", "applicationBtnClass svelte-1l3kjd4");
-    			add_location(button2, file$l, 103, 0, 2391);
-    			attr_dev(div1, "class", "applicationLauncher svelte-1l3kjd4");
-    			add_location(div1, file$l, 89, 0, 1995);
+    			attr_dev(img2, "class", "svelte-11tlc09");
+    			add_location(img2, file$l, 124, 4, 2926);
+    			attr_dev(button2, "class", "applicationBtnClass svelte-11tlc09");
+    			add_location(button2, file$l, 120, 0, 2785);
+    			attr_dev(div1, "class", "sideBarButtonHalf svelte-11tlc09");
+    			add_location(div1, file$l, 111, 0, 2512);
+    			attr_dev(div2, "class", "sideBarNonButtonHalf svelte-11tlc09");
+    			add_location(div2, file$l, 128, 0, 2980);
+    			attr_dev(div3, "class", "applicationLauncher svelte-11tlc09");
+    			add_location(div3, file$l, 105, 0, 2357);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			append_dev(div1, t0);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div0);
+    			append_dev(div3, t0);
+    			append_dev(div3, div1);
     			append_dev(div1, button0);
     			append_dev(button0, img0);
     			append_dev(button0, t1);
@@ -1187,13 +1199,15 @@ My newer projects are usually on my blog:
     			append_dev(div1, button2);
     			append_dev(button2, img2);
     			append_dev(button2, t5);
+    			append_dev(div3, t6);
+    			append_dev(div3, div2);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*click_application_launcher_about*/ ctx[1], false, false, false, false),
-    					listen_dev(button1, "click", /*clickbo2*/ ctx[2], false, false, false, false),
-    					listen_dev(button2, "click", /*click_handler*/ ctx[3], false, false, false, false)
+    					listen_dev(button0, "click", /*click_application_launcher_about*/ ctx[2], false, false, false, false),
+    					listen_dev(button1, "click", /*clickbo2*/ ctx[3], false, false, false, false),
+    					listen_dev(button2, "click", /*click_handler*/ ctx[4], false, false, false, false)
     				];
 
     				mounted = true;
@@ -1205,21 +1219,21 @@ My newer projects are usually on my blog:
 
     			add_render_callback(() => {
     				if (!current) return;
-    				if (div1_outro) div1_outro.end(1);
-    				div1_intro = create_in_transition(div1, fly, { y: 200, duration: 500 });
-    				div1_intro.start();
+    				if (div3_outro) div3_outro.end(1);
+    				div3_intro = create_in_transition(div3, fly, { y: 200, duration: 500 });
+    				div3_intro.start();
     			});
 
     			current = true;
     		},
     		o: function outro(local) {
-    			if (div1_intro) div1_intro.invalidate();
-    			div1_outro = create_out_transition(div1, fly, { y: 200, duration: 500 });
+    			if (div3_intro) div3_intro.invalidate();
+    			div3_outro = create_out_transition(div3, fly, { y: 200, duration: 500 });
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
-    			if (detaching && div1_outro) div1_outro.end();
+    			if (detaching) detach_dev(div3);
+    			if (detaching && div3_outro) div3_outro.end();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1229,7 +1243,7 @@ My newer projects are usually on my blog:
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(89:0) {#if visible}",
+    		source: "(105:0) {#if visible}",
     		ctx
     	});
 
@@ -1255,12 +1269,12 @@ My newer projects are usually on my blog:
     			button = element("button");
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./icon.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "applicationLauncherImgClass svelte-1l3kjd4");
-    			add_location(img, file$l, 113, 8, 2707);
-    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-1l3kjd4");
-    			add_location(button, file$l, 112, 4, 2619);
-    			attr_dev(div, "class", "bottomBar svelte-1l3kjd4");
-    			add_location(div, file$l, 111, 0, 2591);
+    			attr_dev(img, "class", "applicationLauncherImgClass svelte-11tlc09");
+    			add_location(img, file$l, 135, 8, 3166);
+    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-11tlc09");
+    			add_location(button, file$l, 134, 4, 3078);
+    			attr_dev(div, "class", "bottomBar svelte-11tlc09");
+    			add_location(div, file$l, 133, 0, 3050);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1274,7 +1288,7 @@ My newer projects are usually on my blog:
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[4], false, false, false, false);
+    				dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[5], false, false, false, false);
     				mounted = true;
     			}
     		},
@@ -1335,6 +1349,7 @@ My newer projects are usually on my blog:
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('BottomBar', slots, []);
     	let visible = false;
+    	let hostname = location.hostname;
 
     	function click_application_launcher_about() {
     		zindex_about.update(n => 1000);
@@ -1372,12 +1387,14 @@ My newer projects are usually on my blog:
     		zindex2,
     		display_about,
     		display2,
+    		hostname,
     		click_application_launcher_about,
     		clickbo2
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('visible' in $$props) $$invalidate(0, visible = $$props.visible);
+    		if ('hostname' in $$props) $$invalidate(1, hostname = $$props.hostname);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1386,6 +1403,7 @@ My newer projects are usually on my blog:
 
     	return [
     		visible,
+    		hostname,
     		click_application_launcher_about,
     		clickbo2,
     		click_handler,
