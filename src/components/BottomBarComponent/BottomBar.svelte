@@ -1,8 +1,23 @@
 <script>
-    let visible = false;
+    import { onMount } from "svelte";
+
+    
     import { fly } from 'svelte/transition';
     import { zindex_about,zindex2,display_about,display2 } from '../../stores/stores.js';
-    let hostname = location.hostname; 
+
+    let clientIP = ""; 
+    let visible = false;
+    onMount(async () => {
+        fetch("http://www.geoplugin.net/json.gp")
+        .then(response => response.json())
+        .then(data => {
+            //console.log(data);
+            clientIP=data.geoplugin_request;
+    }).catch(error => {
+        console.log(error);
+        return [];
+        });
+    });
 
     function click_application_launcher_about() {
         zindex_about.update((n)=>1000);
@@ -127,7 +142,7 @@
 </button>
 </div>
 <div class="sideBarNonButtonHalf">
-    {hostname}
+    {clientIP}
 </div>
 </div>
 {/if}
