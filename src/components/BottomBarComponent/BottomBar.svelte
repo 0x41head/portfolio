@@ -59,29 +59,34 @@
         border:2px solid;
         border-color: #102C57;
     }
+
     .sideBarButtonHalf{
         height:100%;
         width: 50%;
         position:absolute;
     }
+
     .sideBarNonButtonHalf{
         height:100%;
         width: 50%;
         background-color: #96B6C5;
         border-left:2px solid;
         border-color: #102C57;
-        
+        text-align: center;
+        align-items: center;
         position:absolute;
         right: 0;
+        padding-top: 2%;
     }
-    img{
+
+    .buttonImg{
         height:20px;
         margin-right: 10px;
     }
 
     .applicationLauncherImgClass{
+        height:100%;
         width: 100%;
-        height: 100%;
     }
 
     .applicationBtnClass {
@@ -109,11 +114,18 @@
     .applicationBtnClass:hover {
         background-color: #96B6C5;
     }
+
     .top-style-div{
         background-color: #96B6C5;
         height: 25px;
         border-bottom:2px solid;
         border-color: #102C57;
+    }
+
+    .nonButtonImg{
+        height: 100px;
+        border: 2px solid #EEE0C9;
+        border-radius: 5px;
     }
 
 </style>
@@ -126,22 +138,23 @@
 <div class="top-style-div" ></div>
 <div class="sideBarButtonHalf">
 <button class="applicationBtnClass" on:click={click_application_launcher_about}>
-    <img src='./about.svg'/>
+    <img src='./about.svg' class="buttonImg"/>
     about
 </button>
 <button class="applicationBtnClass" on:click={clickbo2}>
-    <img src='./project.svg'/>
+    <img src='./project.svg' class="buttonImg"/>
     projects
 </button>
 <button class="applicationBtnClass" on:click={()=>{ 
     window.open("https://github.com/0x41head/", "_blank");
     visible=!visible}
 }>
-    <img src='./github.svg'/>
+    <img src='./github.svg' class="buttonImg"/>
     github
 </button>
 </div>
 <div class="sideBarNonButtonHalf">
+    <img src='./girl.jpg' class="nonButtonImg"/><br/>
     {clientIP}
 </div>
 </div>

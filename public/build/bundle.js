@@ -1113,7 +1113,7 @@ My newer projects are usually on my blog:
 
     const file$l = "src/components/BottomBarComponent/BottomBar.svelte";
 
-    // (120:0) {#if visible}
+    // (132:0) {#if visible}
     function create_if_block$5(ctx) {
     	let div3;
     	let div0;
@@ -1135,7 +1135,11 @@ My newer projects are usually on my blog:
     	let t5;
     	let t6;
     	let div2;
+    	let img3;
+    	let img3_src_value;
+    	let br;
     	let t7;
+    	let t8;
     	let div3_intro;
     	let div3_outro;
     	let current;
@@ -1161,30 +1165,37 @@ My newer projects are usually on my blog:
     			t5 = text("\n    github");
     			t6 = space();
     			div2 = element("div");
-    			t7 = text(/*clientIP*/ ctx[0]);
-    			attr_dev(div0, "class", "top-style-div svelte-11tlc09");
-    			add_location(div0, file$l, 125, 0, 2819);
+    			img3 = element("img");
+    			br = element("br");
+    			t7 = space();
+    			t8 = text(/*clientIP*/ ctx[0]);
+    			attr_dev(div0, "class", "top-style-div svelte-7jyswj");
+    			add_location(div0, file$l, 137, 0, 3014);
     			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "svelte-11tlc09");
-    			add_location(img0, file$l, 128, 4, 2971);
-    			attr_dev(button0, "class", "applicationBtnClass svelte-11tlc09");
-    			add_location(button0, file$l, 127, 0, 2886);
+    			attr_dev(img0, "class", "buttonImg svelte-7jyswj");
+    			add_location(img0, file$l, 140, 4, 3166);
+    			attr_dev(button0, "class", "applicationBtnClass svelte-7jyswj");
+    			add_location(button0, file$l, 139, 0, 3081);
     			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "svelte-11tlc09");
-    			add_location(img1, file$l, 132, 4, 3077);
-    			attr_dev(button1, "class", "applicationBtnClass svelte-11tlc09");
-    			add_location(button1, file$l, 131, 0, 3016);
+    			attr_dev(img1, "class", "buttonImg svelte-7jyswj");
+    			add_location(img1, file$l, 144, 4, 3290);
+    			attr_dev(button1, "class", "applicationBtnClass svelte-7jyswj");
+    			add_location(button1, file$l, 143, 0, 3229);
     			if (!src_url_equal(img2.src, img2_src_value = "./github.svg")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "svelte-11tlc09");
-    			add_location(img2, file$l, 139, 4, 3268);
-    			attr_dev(button2, "class", "applicationBtnClass svelte-11tlc09");
-    			add_location(button2, file$l, 135, 0, 3127);
-    			attr_dev(div1, "class", "sideBarButtonHalf svelte-11tlc09");
-    			add_location(div1, file$l, 126, 0, 2854);
-    			attr_dev(div2, "class", "sideBarNonButtonHalf svelte-11tlc09");
-    			add_location(div2, file$l, 143, 0, 3322);
-    			attr_dev(div3, "class", "applicationLauncher svelte-11tlc09");
-    			add_location(div3, file$l, 120, 0, 2699);
+    			attr_dev(img2, "class", "buttonImg svelte-7jyswj");
+    			add_location(img2, file$l, 151, 4, 3499);
+    			attr_dev(button2, "class", "applicationBtnClass svelte-7jyswj");
+    			add_location(button2, file$l, 147, 0, 3358);
+    			attr_dev(div1, "class", "sideBarButtonHalf svelte-7jyswj");
+    			add_location(div1, file$l, 138, 0, 3049);
+    			if (!src_url_equal(img3.src, img3_src_value = "./girl.jpg")) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "class", "nonButtonImg svelte-7jyswj");
+    			add_location(img3, file$l, 156, 4, 3610);
+    			add_location(br, file$l, 156, 48, 3654);
+    			attr_dev(div2, "class", "sideBarNonButtonHalf svelte-7jyswj");
+    			add_location(div2, file$l, 155, 0, 3571);
+    			attr_dev(div3, "class", "applicationLauncher svelte-7jyswj");
+    			add_location(div3, file$l, 132, 0, 2894);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -1204,7 +1215,10 @@ My newer projects are usually on my blog:
     			append_dev(button2, t5);
     			append_dev(div3, t6);
     			append_dev(div3, div2);
+    			append_dev(div2, img3);
+    			append_dev(div2, br);
     			append_dev(div2, t7);
+    			append_dev(div2, t8);
     			current = true;
 
     			if (!mounted) {
@@ -1218,7 +1232,7 @@ My newer projects are usually on my blog:
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*clientIP*/ 1) set_data_dev(t7, /*clientIP*/ ctx[0]);
+    			if (!current || dirty & /*clientIP*/ 1) set_data_dev(t8, /*clientIP*/ ctx[0]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1249,7 +1263,7 @@ My newer projects are usually on my blog:
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(120:0) {#if visible}",
+    		source: "(132:0) {#if visible}",
     		ctx
     	});
 
@@ -1275,12 +1289,12 @@ My newer projects are usually on my blog:
     			button = element("button");
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./icon.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "applicationLauncherImgClass svelte-11tlc09");
-    			add_location(img, file$l, 150, 8, 3508);
-    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-11tlc09");
-    			add_location(button, file$l, 149, 4, 3420);
-    			attr_dev(div, "class", "bottomBar svelte-11tlc09");
-    			add_location(div, file$l, 148, 0, 3392);
+    			attr_dev(img, "class", "applicationLauncherImgClass svelte-7jyswj");
+    			add_location(img, file$l, 163, 8, 3811);
+    			attr_dev(button, "class", "applicationLauncherBtnClass svelte-7jyswj");
+    			add_location(button, file$l, 162, 4, 3723);
+    			attr_dev(div, "class", "bottomBar svelte-7jyswj");
+    			add_location(div, file$l, 161, 0, 3695);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
