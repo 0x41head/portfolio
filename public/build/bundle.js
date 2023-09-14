@@ -1041,9 +1041,9 @@ var app = (function () {
 
     const zindex_about = writable(0);
     const left_about = writable(200);
-    const zindex2 = writable(0);
+    const zindex_projects = writable(0);
     const display_about = writable(false);
-    const display2 = writable(false);
+    const display_projects = writable(false);
     const source_projects = `
 # Old Projects
 My newer projects are usually on my blog:
@@ -1383,15 +1383,15 @@ My newer projects are usually on my blog:
 
     	function click_application_launcher_about() {
     		zindex_about.update(n => 1000);
-    		zindex2.update(n => 0);
+    		zindex_projects.update(n => 0);
     		display_about.update(n => true);
     		$$invalidate(1, visible = !visible);
     	}
 
     	function clickbo2() {
     		zindex_about.update(n => 0);
-    		zindex2.update(n => 1000);
-    		display2.update(n => true);
+    		zindex_projects.update(n => 1000);
+    		display_projects.update(n => true);
     		$$invalidate(1, visible = !visible);
     	}
 
@@ -1414,9 +1414,9 @@ My newer projects are usually on my blog:
     		onMount,
     		fly,
     		zindex_about,
-    		zindex2,
+    		zindex_projects,
     		display_about,
-    		display2,
+    		display_projects,
     		clientIP,
     		visible,
     		click_application_launcher_about,
@@ -1848,14 +1848,14 @@ My newer projects are usually on my blog:
 
     	function click_about_logo() {
     		zindex_about.update(n => 1000);
-    		zindex2.update(n => 0);
+    		zindex_projects.update(n => 0);
     		display_about.update(n => true);
     	}
 
     	function clickbo2() {
     		zindex_about.update(n => 0);
-    		zindex2.update(n => 1000);
-    		display2.update(n => true);
+    		zindex_projects.update(n => 1000);
+    		display_projects.update(n => true);
     	}
 
     	const writable_props = [];
@@ -1870,9 +1870,9 @@ My newer projects are usually on my blog:
 
     	$$self.$capture_state = () => ({
     		zindex_about,
-    		zindex2,
+    		zindex_projects,
     		display_about,
-    		display2,
+    		display_projects,
     		click_about_logo,
     		clickbo2
     	});
@@ -10847,14 +10847,14 @@ My newer projects are usually on my blog:
     	return block;
     }
 
-    // (38:0) {#if $display2}
+    // (38:0) {#if $display_projects}
     function create_if_block(ctx) {
     	let draggable;
     	let current;
 
     	draggable = new Draggable({
     			props: {
-    				zindex: /*$zindex2*/ ctx[4],
+    				zindex: /*$zindex_projects*/ ctx[4],
     				nameOfWindow: "projects",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
@@ -10875,7 +10875,7 @@ My newer projects are usually on my blog:
     		},
     		p: function update(ctx, dirty) {
     			const draggable_changes = {};
-    			if (dirty & /*$zindex2*/ 16) draggable_changes.zindex = /*$zindex2*/ ctx[4];
+    			if (dirty & /*$zindex_projects*/ 16) draggable_changes.zindex = /*$zindex_projects*/ ctx[4];
 
     			if (dirty & /*$$scope*/ 512) {
     				draggable_changes.$$scope = { dirty, ctx };
@@ -10901,14 +10901,14 @@ My newer projects are usually on my blog:
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(38:0) {#if $display2}",
+    		source: "(38:0) {#if $display_projects}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex2}   nameOfWindow={"projects"} >
+    // (39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex_projects}   nameOfWindow={"projects"} >
     function create_default_slot(ctx) {
     	let sveltemarkdown;
     	let current;
@@ -10945,7 +10945,7 @@ My newer projects are usually on my blog:
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex2}   nameOfWindow={\\\"projects\\\"} >",
+    		source: "(39:0) <Draggable on:toggle={onClick2}   on:close={onClose2}   zindex={$zindex_projects}   nameOfWindow={\\\"projects\\\"} >",
     		ctx
     	});
 
@@ -10963,7 +10963,7 @@ My newer projects are usually on my blog:
     	bottombar = new BottomBar({ $$inline: true });
     	iconlist = new IconList({ $$inline: true });
     	let if_block0 = /*$display_about*/ ctx[0] && create_if_block_1(ctx);
-    	let if_block1 = /*$display2*/ ctx[3] && create_if_block(ctx);
+    	let if_block1 = /*$display_projects*/ ctx[3] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -11014,11 +11014,11 @@ My newer projects are usually on my blog:
     				check_outros();
     			}
 
-    			if (/*$display2*/ ctx[3]) {
+    			if (/*$display_projects*/ ctx[3]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*$display2*/ 8) {
+    					if (dirty & /*$display_projects*/ 8) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -11079,30 +11079,30 @@ My newer projects are usually on my blog:
     	let $display_about;
     	let $zindex_about;
     	let $left_about;
-    	let $display2;
-    	let $zindex2;
+    	let $display_projects;
+    	let $zindex_projects;
     	validate_store(display_about, 'display_about');
     	component_subscribe($$self, display_about, $$value => $$invalidate(0, $display_about = $$value));
     	validate_store(zindex_about, 'zindex_about');
     	component_subscribe($$self, zindex_about, $$value => $$invalidate(1, $zindex_about = $$value));
     	validate_store(left_about, 'left_about');
     	component_subscribe($$self, left_about, $$value => $$invalidate(2, $left_about = $$value));
-    	validate_store(display2, 'display2');
-    	component_subscribe($$self, display2, $$value => $$invalidate(3, $display2 = $$value));
-    	validate_store(zindex2, 'zindex2');
-    	component_subscribe($$self, zindex2, $$value => $$invalidate(4, $zindex2 = $$value));
+    	validate_store(display_projects, 'display_projects');
+    	component_subscribe($$self, display_projects, $$value => $$invalidate(3, $display_projects = $$value));
+    	validate_store(zindex_projects, 'zindex_projects');
+    	component_subscribe($$self, zindex_projects, $$value => $$invalidate(4, $zindex_projects = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
 
     	function onClick_about() {
     		zindex_about.update(n => 1000);
-    		zindex2.update(n => 0);
+    		zindex_projects.update(n => 0);
     		console.log('here');
     	}
 
     	function onClick2() {
     		zindex_about.update(n => 0);
-    		zindex2.update(n => 1000);
+    		zindex_projects.update(n => 1000);
     	}
 
     	function onClose_about() {
@@ -11110,7 +11110,7 @@ My newer projects are usually on my blog:
     	}
 
     	function onClose2() {
-    		display2.update(n => false);
+    		display_projects.update(n => false);
     	}
 
     	const writable_props = [];
@@ -11124,9 +11124,9 @@ My newer projects are usually on my blog:
     		Draggable,
     		IconList,
     		zindex_about,
-    		zindex2,
+    		zindex_projects,
     		display_about,
-    		display2,
+    		display_projects,
     		source_about,
     		left_about,
     		source_projects,
@@ -11138,16 +11138,16 @@ My newer projects are usually on my blog:
     		$display_about,
     		$zindex_about,
     		$left_about,
-    		$display2,
-    		$zindex2
+    		$display_projects,
+    		$zindex_projects
     	});
 
     	return [
     		$display_about,
     		$zindex_about,
     		$left_about,
-    		$display2,
-    		$zindex2,
+    		$display_projects,
+    		$zindex_projects,
     		onClick_about,
     		onClick2,
     		onClose_about,

@@ -3,7 +3,7 @@
 
     
     import { fly } from 'svelte/transition';
-    import { zindex_about,zindex2,display_about,display2 } from '../../stores/stores.js';
+    import { zindex_about,zindex_projects,display_about,display_projects } from '../../stores/stores.js';
 
     let clientIP = ""; 
     let visible = false;
@@ -21,14 +21,14 @@
 
     function click_application_launcher_about() {
         zindex_about.update((n)=>1000);
-		zindex2.update((n)=>0);
+		zindex_projects.update((n)=>0);
         display_about.update((n)=>true);
         visible=!visible;
   }
   function clickbo2() {
         zindex_about.update((n)=>0);
-		zindex2.update((n)=>1000);
-        display2.update((n)=>true);
+		zindex_projects.update((n)=>1000);
+        display_projects.update((n)=>true);
         visible=!visible;
   }
   

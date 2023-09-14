@@ -1,10 +1,11 @@
 import { writable } from 'svelte/store';
+export const left_about = writable(200);
+export const left_projects = writable(200);
 
 export const zindex_about = writable(0);
-export const left_about = writable(200);
-export const zindex2 = writable(0);
+export const zindex_projects = writable(0);
 export const display_about = writable(false);
-export const display2 = writable(false);
+export const display_projects = writable(false);
 export const source_projects = `
 # Old Projects
 My newer projects are usually on my blog:

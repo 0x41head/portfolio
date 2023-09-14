@@ -2,23 +2,31 @@
     import BottomBar from "./components/BottomBarComponent/BottomBar.svelte";
     import Draggable from "./components/DraggableComponent/Draggable.svelte";
     import IconList from "./components/IconListComponent/IconList.svelte";
-	import { zindex_about,zindex2,display_about,display2,source_about,left_about,source_projects } from './stores/stores.js';
+	import { 
+		zindex_about,
+		zindex_projects,
+		display_about,
+		display_projects,
+		source_about,
+		left_about,
+		left_projects,
+		source_projects } from './stores/stores.js';
 	import SvelteMarkdown from 'svelte-markdown'
 
 	function onClick_about() {
 		zindex_about.update((n)=>1000);
-		zindex2.update((n)=>0);
+		zindex_projects.update((n)=>0);
 		console.log('here')
 	}
 	function onClick2() {
 		zindex_about.update((n)=>0);
-		zindex2.update((n)=>1000);
+		zindex_projects.update((n)=>1000);
 	}
 	function onClose_about() {
 		display_about.update((n)=>false);
 	}
 	function onClose2() {
-		display2.update((n)=>false);
+		display_projects.update((n)=>false);
 	}
 </script>
 
@@ -35,10 +43,11 @@
 </Draggable>
 {/if}
 
-{#if $display2}
+{#if $display_projects}
 <Draggable on:toggle={onClick2} 
 	on:close={onClose2} 
-	zindex={$zindex2} 
+	zindex={$zindex_projects} 
+	left={$left_projects}
 	nameOfWindow={"projects"} >
 	<SvelteMarkdown  source={source_projects} />
 </Draggable>
