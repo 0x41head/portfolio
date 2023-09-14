@@ -1170,32 +1170,32 @@ My newer projects are usually on my blog:
     			t7 = space();
     			t8 = text(/*clientIP*/ ctx[0]);
     			attr_dev(div0, "class", "top-style-div svelte-7jyswj");
-    			add_location(div0, file$l, 137, 0, 3014);
+    			add_location(div0, file$l, 137, 0, 3000);
     			if (!src_url_equal(img0.src, img0_src_value = "./about.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "class", "buttonImg svelte-7jyswj");
-    			add_location(img0, file$l, 140, 4, 3166);
+    			add_location(img0, file$l, 140, 4, 3152);
     			attr_dev(button0, "class", "applicationBtnClass svelte-7jyswj");
-    			add_location(button0, file$l, 139, 0, 3081);
+    			add_location(button0, file$l, 139, 0, 3067);
     			if (!src_url_equal(img1.src, img1_src_value = "./project.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "buttonImg svelte-7jyswj");
-    			add_location(img1, file$l, 144, 4, 3290);
+    			add_location(img1, file$l, 144, 4, 3276);
     			attr_dev(button1, "class", "applicationBtnClass svelte-7jyswj");
-    			add_location(button1, file$l, 143, 0, 3229);
+    			add_location(button1, file$l, 143, 0, 3215);
     			if (!src_url_equal(img2.src, img2_src_value = "./github.svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "class", "buttonImg svelte-7jyswj");
-    			add_location(img2, file$l, 151, 4, 3499);
+    			add_location(img2, file$l, 151, 4, 3485);
     			attr_dev(button2, "class", "applicationBtnClass svelte-7jyswj");
-    			add_location(button2, file$l, 147, 0, 3358);
+    			add_location(button2, file$l, 147, 0, 3344);
     			attr_dev(div1, "class", "sideBarButtonHalf svelte-7jyswj");
-    			add_location(div1, file$l, 138, 0, 3049);
+    			add_location(div1, file$l, 138, 0, 3035);
     			if (!src_url_equal(img3.src, img3_src_value = "./girl.jpg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "nonButtonImg svelte-7jyswj");
-    			add_location(img3, file$l, 156, 4, 3610);
-    			add_location(br, file$l, 156, 48, 3654);
+    			add_location(img3, file$l, 156, 4, 3596);
+    			add_location(br, file$l, 156, 48, 3640);
     			attr_dev(div2, "class", "sideBarNonButtonHalf svelte-7jyswj");
-    			add_location(div2, file$l, 155, 0, 3571);
+    			add_location(div2, file$l, 155, 0, 3557);
     			attr_dev(div3, "class", "applicationLauncher svelte-7jyswj");
-    			add_location(div3, file$l, 132, 0, 2894);
+    			add_location(div3, file$l, 132, 0, 2880);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -1290,11 +1290,11 @@ My newer projects are usually on my blog:
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "./icon.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "class", "applicationLauncherImgClass svelte-7jyswj");
-    			add_location(img, file$l, 163, 8, 3811);
+    			add_location(img, file$l, 163, 8, 3797);
     			attr_dev(button, "class", "applicationLauncherBtnClass svelte-7jyswj");
-    			add_location(button, file$l, 162, 4, 3723);
+    			add_location(button, file$l, 162, 4, 3709);
     			attr_dev(div, "class", "bottomBar svelte-7jyswj");
-    			add_location(div, file$l, 161, 0, 3695);
+    			add_location(div, file$l, 161, 0, 3681);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1372,9 +1372,9 @@ My newer projects are usually on my blog:
     	let visible = false;
 
     	onMount(async () => {
-    		fetch("http://www.geoplugin.net/json.gp").then(response => response.json()).then(data => {
+    		fetch("https://api.ipify.org?format=json").then(response => response.json()).then(data => {
     			//console.log(data);
-    			$$invalidate(0, clientIP = data.geoplugin_request);
+    			$$invalidate(0, clientIP = data.ip);
     		}).catch(error => {
     			console.log(error);
     			return [];

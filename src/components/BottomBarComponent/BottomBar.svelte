@@ -8,11 +8,11 @@
     let clientIP = ""; 
     let visible = false;
     onMount(async () => {
-        fetch("http://www.geoplugin.net/json.gp")
+        fetch("https://api.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
             //console.log(data);
-            clientIP=data.geoplugin_request;
+            clientIP=data.ip;
     }).catch(error => {
         console.log(error);
         return [];
